@@ -2,13 +2,13 @@ package unit5;
 
 import static org.junit.Assert.*;
 import junit.framework.Assert;
-
+import static java.lang.System.out;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 public class CadenasAlumnoTest {
-	public CadenasAlumno cad;
+	public CadenasAlumno cad;  // si no esta fuera del construcctor os test no funcionan
 	
 	public CadenasAlumnoTest(){
 		cad = new CadenasAlumno();
@@ -16,13 +16,23 @@ public class CadenasAlumnoTest {
 	
 	@Test
 	public final void testSonIguales() {
-		String m = "a", n = "a";
+		String m = "entornos", n = "ento";
 		
 		boolean recived = cad.sonIguales(m, n);
 		
-		assertEquals(true, recived);
+		assertEquals(false, recived);
 		
-		m = "ab"; n = "a";
+		m = "ento"; n = "entornos,";
+	    recived = cad.sonIguales(m, n);
+		
+		assertEquals(false, recived);
+		
+		m = "entornos"; n = "sonrotne";
+	    recived = cad.sonIguales(m, n);
+		
+		assertEquals(false, recived);
+		
+		m = "entornos"; n = "entornos";
 	    recived = cad.sonIguales(m, n);
 		
 		assertEquals(true, recived);
@@ -30,34 +40,50 @@ public class CadenasAlumnoTest {
 
 	@Test
 	public final void testEsMayor() {
-		//fail("Not yet implemented"); // TODO
+		
+		boolean recived = cad.esMayor("entornos", "ento");
+		assertEquals(true, recived);
+		
 	}
-/*
+
 	@Test
 	public final void testEsMenor() {
-		fail("Not yet implemented"); // TODO
+		
+		assertEquals(true, cad.esMenor("ento", "entornos"));
+		
 	}
-
+	
+	
 	@Test
 	public final void testComparaIgnorandoMayusculas() {
-		fail("Not yet implemented"); // TODO
+		
+		assertEquals("Ento".equalsIgnoreCase("entornos"), cad.comparaIgnorandoMayusculas("Ento", "entornos"));
+		
 	}
-
+	
 	@Test
 	public final void testReemplazaTodos() {
-		fail("Not yet implemented"); // TODO
+		
+		assertEquals("Entornos".replaceAll("o", "x"), cad.reemplazaTodos("Entornos","o", "x"));
+		
+		
 	}
 
+	
 	@Test
 	public final void testReemplazaPrimero() {
-		fail("Not yet implemented"); // TODO
+		assertEquals("Entornos".replaceFirst("o", "x"), cad.reemplazaPrimero("Entornos","o", "x"));
 	}
-
+	
+	
 	@Test
 	public final void testQuitaEspacios() {
-		fail("Not yet implemented"); // TODO
+		
+		assertEquals("  Entornos  ".trim(), cad.quitaEspacios("  Entornos     "));
+		
 	}
 
+	/*
 	@Test
 	public final void testConvertirMayusculas() {
 		fail("Not yet implemented"); // TODO

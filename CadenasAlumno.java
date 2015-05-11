@@ -25,12 +25,11 @@ public class CadenasAlumno {
 	
 	public static boolean esMayor(String cadena1, String cadena2) {
 		
-		if(cadena1.length() == cadena2.length()){
+		if(cadena1.length() > cadena2.length()){
 			
-			for(int i = 0; i<cadena1.length(); i++){
-				if(cadena1.charAt(i) > cadena2.charAt(i))
-					return true;
-			}
+			
+			return true;
+			
 		
 		}
 		
@@ -39,12 +38,11 @@ public class CadenasAlumno {
 	
 	public static boolean esMenor(String cadena1, String cadena2) {
 		
-		if(cadena1.length() == cadena2.length()){
+		if(cadena1.length() < cadena2.length()){
 			
-			for(int i = 0; i<cadena1.length(); i++){
-				if(cadena1.charAt(i) < cadena2.charAt(i))
-					return true;
-			}
+			
+			return true;
+			
 		}
 		
 		return false;
@@ -121,6 +119,14 @@ public class CadenasAlumno {
 				resultado+=resultadoTemp.charAt(i);
 			}
 		}
+		
+		resultadoTemp=resultado;
+		resultado="";
+		for (char c : resultadoTemp.toCharArray()){
+			resultado = c + resultado;
+			
+		}
+		
 		// Aqui RTrim
 		return resultado;
 	
