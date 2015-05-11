@@ -1,21 +1,38 @@
 package unit5;
 
 import static org.junit.Assert.*;
+import junit.framework.Assert;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 public class CadenasAlumnoTest {
-
+	public CadenasAlumno cad;
+	
+	public CadenasAlumnoTest(){
+		cad = new CadenasAlumno();
+	}
+	
 	@Test
 	public final void testSonIguales() {
-		fail("Not yet implemented"); // TODO
+		String m = "a", n = "a";
+		
+		boolean recived = cad.sonIguales(m, n);
+		
+		assertEquals(true, recived);
+		
+		m = "ab"; n = "a";
+	    recived = cad.sonIguales(m, n);
+		
+		assertEquals(true, recived);
 	}
 
 	@Test
 	public final void testEsMayor() {
-		fail("Not yet implemented"); // TODO
+		//fail("Not yet implemented"); // TODO
 	}
-
+/*
 	@Test
 	public final void testEsMenor() {
 		fail("Not yet implemented"); // TODO
@@ -100,5 +117,5 @@ public class CadenasAlumnoTest {
 	public final void testMain() {
 		fail("Not yet implemented"); // TODO
 	}
-
+*/
 }

@@ -11,6 +11,10 @@ import static java.lang.System.out;
  */
 public class CadenasAlumno {
 
+	public CadenasAlumno(){
+		
+	};
+	
 	public static boolean sonIguales(String cadena1, String cadena2) {
 		
 		if(cadena1 == cadena2)
