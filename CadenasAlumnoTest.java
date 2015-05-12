@@ -1,5 +1,11 @@
 package unit5;
 
+/**
+ * @author Bruno Del Greco
+ *
+ */
+
+
 import static org.junit.Assert.*;
 import junit.framework.Assert;
 import static java.lang.System.out;
@@ -83,65 +89,69 @@ public class CadenasAlumnoTest {
 		
 	}
 
-	/*
+	
 	@Test
 	public final void testConvertirMayusculas() {
-		fail("Not yet implemented"); // TODO
+		
+		assertEquals("Entornos".toUpperCase(), cad.convertirMayusculas("entornos"));
 	}
 
+	
+	
 	@Test
 	public final void testConvertirMinusculas() {
-		fail("Not yet implemented"); // TODO
+		
+		assertEquals("ENTORNOS".toLowerCase(), cad.convertirMinusculas("ENTORNOS"));
 	}
 
+	
+	
 	@Test
 	public final void testLongitudCadena() {
-		fail("Not yet implemented"); // TODO
+		
+		String cadena = "cadena";
+		assertEquals(cadena.length(), cad.longitudCadena(cadena));
+		
 	}
 
+	
 	@Test
 	public final void testEmpiezaCon() {
-		fail("Not yet implemented"); // TODO
+		String cadena = "cadena";
+		assertEquals(cadena.startsWith("ca"), cad.empiezaCon(cadena, "ca"));
+		
 	}
 
+	
+	
 	@Test
 	public final void testAcabaEn() {
-		fail("Not yet implemented"); // TODO
+		String cadena = "cadena";
+		assertEquals(!cadena.endsWith("na"), cad.acabaEn(cadena, "na"));
+		
 	}
 
-	@Test
-	public final void testCaracterPosicion() {
-		fail("Not yet implemented"); // TODO
-	}
-
+	
 	@Test
 	public final void testPosicionPrimeraCadena() {
-		fail("Not yet implemented"); // TODO
+		String cadena = "cadena";
+		assertEquals(cadena.indexOf("na"), cad.posicionPrimeraCadena(cadena, "na"));
 	}
-
+	
+	
 	@Test
 	public final void testExtraerSubstringStringInt() {
-		fail("Not yet implemented"); // TODO
+		String cadena = "cadena";
+		assertEquals(cadena.substring(3), cad.extraerSubstring(cadena, 3));
+		assertEquals(cadena.substring(3,5), cad.extraerSubstring(cadena, 3,5));
 	}
-
-	@Test
-	public final void testExtraerSubstringStringIntInt() {
-		fail("Not yet implemented"); // TODO
-	}
-
-	@Test
-	public final void testConvertirEnteroString() {
-		fail("Not yet implemented"); // TODO
-	}
+	
 
 	@Test
 	public final void testConcatenaCadenas() {
-		fail("Not yet implemented"); // TODO
+		String cadena = "cadena", cadena2 = "Entornos";
+		assertEquals(cadena.concat(cadena2), cad.concatenaCadenas(cadena, cadena2));
 	}
 
-	@Test
-	public final void testMain() {
-		fail("Not yet implemented"); // TODO
-	}
-*/
+
 }

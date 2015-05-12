@@ -204,6 +204,7 @@ public class CadenasAlumno {
 		
 		return cadena.charAt(indice);
 	}
+	
 	public static long posicionPrimeraCadena(String cadena, String letra){
 		
 		for(int i = 0; i<cadena.length(); i++)
